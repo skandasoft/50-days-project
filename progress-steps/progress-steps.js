@@ -7,8 +7,10 @@ let current = 1;
 let update = function () {
 	steps.forEach((step, idx) => {
 		if (idx < current) {
+			step.style.transitionDelay = '.45s';
 			step.classList.add('active');
 		} else {
+			step.style.transitionDelay = '0s';
 			step.classList.remove('active');
 		}
 
@@ -30,6 +32,7 @@ next.addEventListener('click', (e) => {
 	if (current > steps.length) {
 		current = steps.length;
 	}
+
 	update();
 });
 
