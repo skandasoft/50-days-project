@@ -43,3 +43,5 @@ prev.addEventListener('click', (e) => {
 	}
 	update();
 });
+
+// getComputedStyle(document.documentElement).getPropertyValue('--active-color')

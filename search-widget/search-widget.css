@@ -30,7 +30,6 @@ body {
 	padding: 14px;
 	border: none;
 	font-size: 18px;
-	opacity: 1;
 	width: 0;
 	transition: 1s ease;
 	transform: translateX(30px);
