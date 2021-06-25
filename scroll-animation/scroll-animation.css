@@ -9,13 +9,44 @@
 
 body {
 	font-family: 'Titillium Web', sans-serif;
+	margin-top: 40px;
+	background-color: hsl(71, 100%, 87%);
+	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+/* h1 {
+	margin-bottom: 40px;
+} */
+.box {
+	width: 350px;
+	height: 200px;
+	margin-top: 40px;
+	padding: 20px;
+	background-color: steelblue;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 100vh;
-	overflow: hidden;
+	color: rgba(255, 255, 255.1);
+	font-size: 30px;
+	border-radius: 5px;
+	transition: transform 0.6s ease-in-out;
+	font-weight: 500;
+	letter-spacing: 2px;
 }
 
-.container {
-	text-align: center;
+.box:nth-child(odd) {
+	transform: translateX(400%);
+}
+.box:nth-child(even) {
+	transform: translateX(-400%);
+}
+
+.box:last-of-type {
+	margin-bottom: 40px;
+}
+.box.show {
+	transform: translateX(0%);
 }
