@@ -30,7 +30,7 @@ body {
 
 .split {
 	color: #fff;
-	transition: width var(--speed) ease;
+	transition: all var(--speed) ease;
 	position: relative;
 	overflow: hidden;
 }
@@ -55,17 +55,25 @@ h1 {
 	background: linear-gradient(var(--left-bg-color), var(--left-bg-color)), url('ps.jpg');
 	width: 100%;
 	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
-.left:hover {
+/* .left:hover {
 	background: url('ps.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 .right:hover {
 	background: url('xbox.jpg');
-}
+	background-size: cover;
+	background-repeat: no-repeat;
+} */
 .right {
 	background: linear-gradient(var(--right-bg-color), var(--right-bg-color)), url('xbox.jpg');
 	background-size: cover;
+	background-repeat: no-repeat;
 	width: 100%;
 }
 

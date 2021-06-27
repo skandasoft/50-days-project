@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--navy-blue: rgb(25, 49, 70);
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	overflow-x: hidden;
+	background-color: hsl(270, 50%, 60%);
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+h1 {
+	text-align: center;
+	text-transform: uppercase;
+	color: hsl(153, 100%, 82%);
+	letter-spacing: 2px;
+	margin: 30px 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	font-family: 'Dancing Script', cursive;
+	font-size: 64px;
+}
+
+.triangle {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	background-color: transparent;
+}
+
+.triangle::before,
+.triangle::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 50px solid transparent;
+	border-bottom: 50px solid #0ff;
+	animation: rotateA 2s ease-out infinite 0.5s;
+}
+
+.triangle::before {
+	transform: rotate(90deg);
+	border-bottom-color: #eee;
+	animation: rotateB 2s linear infinite;
+}
+@keyframes rotateA {
+	0%,
+	25% {
+		transform: rotate(0deg);
+	}
+
+	50%,
+	75% {
+		transform: rotate(180deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes rotateB {
+	0%,
+	25% {
+		transform: rotate(90deg);
+	}
+
+	50%,
+	75% {
+		transform: rotate(270deg);
+	}
+
+	100% {
+		transform: rotate(450deg);
+	}
+}

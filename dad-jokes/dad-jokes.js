@@ -1,27 +1,29 @@
-const labels = document.querySelectorAll('label');
-labels.forEach((label) => {
-	label.innerHTML = label.innerText
-		.split('')
-		.map((letter, idx) => {
-			return `<span style="transition-delay:${idx * 50}ms">${letter}</span>`;
-		})
-		.join('');
-});
+const jokeBtn = document.getElementById('jokeBtn');
+const jokeEl = document.getElementById('jokeEl');
+jokeBtn.addEventListener('click', getJoke);
+// function getJoke() {
+// 	const config = { headers: { Accept: 'application/json' } };
+// 	const url = 'https://icanhazdadjoke.com/';
+// 	const ok = '2';
+// 	fetch(url, config)
+// 		.then((res) => res.json())
+// 		.then((data) => {
+// 			if (data.status.toString().charAt(0) === ok) {
+// 				jokeEl.innerText = data.joke;
+// 			} else {
+// 			}
+// 		});
+// }
 
-const inputs = document.querySelectorAll('input');
-inputs.forEach((input) => {
-	input.addEventListener('focus', () => {
-		let children = Array.from(input.nextElementSibling.children);
-		children.forEach((child) => {
-			child.classList.add('move');
-		});
-	});
-	input.addEventListener('blur', () => {
-		if (input.value) return;
-
-		let children = Array.from(input.nextElementSibling.children);
-		children.forEach((child) => {
-			child.classList.remove('move');
-		});
-	});
-});
+async function getJoke() {
+	const config = { headers: { accept: 'application/json' } };
+	const url = 'https://icanhazdadjoke.com/';
+	const ok = '2';
+	let res = await fetch(url, config);
+	let data = await res.json();
+	if (data.status.toString().charAt(0) === ok) {
+		jokeEl.innerHTML = data.joke;
+	} else {
+	}
+}
+getJoke();
