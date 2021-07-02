@@ -81,14 +81,14 @@ h1 {
 
 .sb {
 	position: relative;
-	width: 400px;
-	height: 100px;
+	width: 800px;
+	/* height: 200px; */
 	/* background-color: #00aabb; */
 	background-color: #fff;
 	padding: 15px;
 	border: none;
 	outline: 0;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	font-size: 48px;
 	color: #000;
 	/* text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.8), -4px 4px 2px rgba(255, 186, 200, 0.8); */

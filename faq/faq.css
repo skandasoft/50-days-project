@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&wght=300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&wght=500;600&display=swap');
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+header {
+	margin: 6rem auto 3rem;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.faq-img {
+	border-radius: 50%;
+}
+.faq-dtls {
+	margin-right: auto;
+	margin-left: 1rem;
+}
+
+.faq-dtls span {
+	color: red;
+}
+
+.btn {
+	padding: 0.5rem 1.2rem;
+	border: none;
+	border-radius: 5px;
+	font-weight: 600;
+	font-size: 0.95rem;
+	font-family: 'Roboto', sans-serif;
+	cursor: pointer;
+}
+
+.btn .fa-heart {
+	margin-right: 4px;
+}
+
+main {
+	background-color: #f3f3f3;
+	padding: 2rem 0 3rem;
+	border-radius: 3px;
+}
+
+main h1 {
+	margin: 0 80px;
+	font-size: 2.5rem;
+	margin-bottom: 2rem;
+	font-size: 3rem;
+	font-weight: 300;
+	color: #444;
+	text-align: center;
+}
+.faq {
+	background-color: #fff;
+	margin: 0 60px;
+	padding: 2rem 1rem;
+	border-radius: 8px;
+	border: 1px solid #ddd;
+	color: #999;
+	position: relative;
+	margin-bottom: 1.2rem;
+	overflow: hidden;
+	transition: 0.3s ease;
+}
+
+.faq.open {
+	/* box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(0, 0, 0, 0.1); */
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq.open::before,
+.faq.open::after {
+	content: '\f075';
+	font-family: 'Font Awesome 5 free';
+	color: #2ecc71;
+	font-size: 7rem;
+	position: absolute;
+	opacity: 0.2;
+	top: 20px;
+	left: 20px;
+	z-index: 0;
+}
+
+.faq.open::after {
+	top: -10px;
+	left: -30px;
+	color: #3498db;
+	transform: rotateY(180deg);
+}
+
+.faq-title {
+	color: #444;
+	margin: 0 35px 0;
+	font-size: 1rem;
+}
+
+.faq-text {
+	margin: 30px 35px 0;
+	display: none;
+}
+
+.faq.open .faq-text {
+	display: block;
+}
+
+.faq-toggle {
+	font-size: 1.4rem;
+	position: absolute;
+	top: 30px;
+	right: 1.5rem;
+	cursor: pointer;
+	padding: 0 5px;
+}
+
+.faq.open .fa-angle-down {
+	display: none;
+}
+
+.faq .fa-times-circle {
+	display: none;
+}
+
+.faq.open .fa-times-circle {
+	display: block;
+}
