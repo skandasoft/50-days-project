@@ -21,7 +21,12 @@ async function getMovies(url) {
 }
 
 function showMovies(movies) {
+	if (movies?.length === 0) {
+		alert('no movies found');
+		return;
+	}
 	main.innerHTML = '';
+
 	movies.forEach((movie) => {
 		const { title, poster_path, vote_average, overview } = movie;
 		const movieEl = document.createElement('div');
