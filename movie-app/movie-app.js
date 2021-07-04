@@ -1,8 +1,7 @@
-const closeBtn = document.querySelector('#close');
 const apikey = '776e9e14ff42a286795eea12f2285b0c';
 const API_URL =
 	'https://api.themoviedb.org/3/movie/popular?api_key=776e9e14ff42a286795eea12f2285b0c&language=en-US&page=1';
-const SEARCH_API =
+const SEARCH_URL =
 	'https://api.themoviedb.org/3/search/movie?api_key=776e9e14ff42a286795eea12f2285b0c&language=en-US&page=1&include_adult=false&&query="';
 
 const IMG_PATH = 'https://image.tmdb.org/t/p/w1280';
@@ -16,12 +15,12 @@ getMovies(API_URL);
 async function getMovies(url) {
 	const res = await fetch(url);
 	const data = await res.json();
-	console.log(data.results);
 	showMovies(data.results);
 }
 
 function showMovies(movies) {
 	if (movies?.length === 0) {
+		// TODO - TOAST NOTIFICATION~STICKY NOTE BOTTOM
 		alert('no movies found');
 		return;
 	}
@@ -32,18 +31,16 @@ function showMovies(movies) {
 		const movieEl = document.createElement('div');
 		movieEl.classList.add('movie-card');
 		movieEl.innerHTML = `
-		<img src="${IMG_PATH}${poster_path}" alt="" class="movie-img" />
-		<div class="movie-info">
-			<div class="movie-title">${title}</div>
-			<span class="movie-rating ${getClassByRate(vote_average)}">${vote_average}</span>
-		</div>
-		<div class="movie-overview">
-			<h3 class="title">Overview</h3>
-			<p>${overview}</p>
-		</div>
-
-
-		`;
+						<img src="${IMG_PATH}${poster_path}" alt="" class="movie-img" />
+						<div class="movie-info">
+							<div class="movie-title">${title}</div>
+							<span class="movie-rating ${getClassByRate(vote_average)}">${vote_average}</span>
+						</div>
+						<div class="movie-overview">
+							<h3 class="title">Overview</h3>
+							<p>${overview}</p>
+						</div>
+						`;
 		main.appendChild(movieEl);
 	});
 }
@@ -62,7 +59,8 @@ form.addEventListener('submit', (e) => {
 	e.preventDefault();
 	const searchTerm = search.value;
 	if (searchTerm.trim()) {
-		getMovies(SEARCH_API + searchTerm + '"');
+		// TODO - SEARCH WITH SPACE
+		getMovies(SEARCH_URL + searchTerm + '"');
 		search.value = '';
 	} else {
 		window.location.reload();
