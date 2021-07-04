@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--primary-color: RGB(31, 36, 69);
+	--secondary-color: RGB(48, 56, 98);
+	--light-purple: #7378c5;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	overflow-x: hidden;
+	background-color: var(--primary-color);
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	width: 100%;
+	padding: 20px;
+	background-color: var(--secondary-color);
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: 40px;
+}
+
+.search {
+	background-color: transparent;
+	font-size: 16px;
+	border: 2px solid var(--primary-color);
+	border-radius: 20px;
+	padding: 10px 20px;
+	font-weight: bold;
+	font-family: inherit;
+	color: #fff;
+}
+
+.search::placeholder {
+	color: var(--light-purple);
+}
+.search:focus {
+	outline: 0;
+	background-color: var(--primary-color);
+}
+
+main {
+	padding: 15px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+.movie-card {
+	background-color: var(--secondary-color);
+	width: 300px;
+	border-radius: 5px;
+	position: relative;
+	box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+}
+.movie-img {
+	width: 100%;
+}
+.movie-info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #eee;
+	padding: 0.5rem 1rem 1rem;
+}
+
+.movie-rating {
+	background-color: var(--primary-color);
+	padding: 3px 8px;
+	border-radius: 3px;
+	font-weight: bold;
+}
+.movie-info span.orange {
+	color: orange;
+}
+.movie-info span.green {
+	color: green;
+}
+.movie-info span.red {
+	color: orangered;
+}
+
+.movie-overview {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #fff;
+	padding: 20px;
+	font-size: 14px;
+	overflow: hidden;
+	border-radius: 0 0 5px 5px;
+	transform: translateY(101%);
+	transition: all 0.6s linear;
+}
+.movie-overview.title {
+	margin-bottom: 20px;
+	margin-top: -5px;
+}
+
+.movie-card:hover .movie-overview {
+	transform: translateY(0);
+	transition: all 0.6s linear;
+}
