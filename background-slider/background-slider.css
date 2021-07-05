@@ -57,7 +57,7 @@ header span {
 	z-index: 1;
 	border: 3px solid rgb(212, 212, 2);
 	font-size: 32px;
-	width: 85%;
+	width: 85vw;
 	display: flex;
 	justify-content: space-between;
 	color: #fff;
