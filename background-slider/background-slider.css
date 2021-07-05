@@ -56,7 +56,7 @@ header span {
 #slider-btns {
 	z-index: 1;
 	border: 3px solid rgb(212, 212, 2);
-	font-size: 32px;
+	font-size: 2rem;
 	width: 85vw;
 	display: flex;
 	justify-content: space-between;
