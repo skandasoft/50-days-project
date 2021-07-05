@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--banner-color: RGB(48, 56, 98);
+	--primary-color: #000;
+	--secondary-color: #fff;
+	--dark-mode-color: #fff;
+	--dark-mode-bgcolor: #000;
+	--color: var(--light-mode-color);
+	--bgcolor: var(--light-mode-bgcolor);
+}
+html {
+	transition: all 0.5s ease-in;
+}
+html.dark {
+	--primary-color: #fff;
+	--secondary-color: #333;
+	background-color: #111;
+	color: var(--primary-color);
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+	overflow: hidden;
+	background-color: var(--bgcolor);
+}
+
+header {
+	width: 100%;
+	padding: 20px;
+	background-color: var(--banner-color);
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+}
+header span {
+	font-family: 'Niconne';
+	color: yellowgreen;
+	font-size: 40px;
+	padding-right: 10px;
+}
+
+#clock {
+	height: 300px;
+	width: 300px;
+	border: 5px solid var(--primary-color);
+	position: relative;
+}
+
+.needle {
+	position: absolute;
+	bottom: 50%;
+	left: 50%;
+	transform-origin: bottom center;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+#hour {
+	height: 60px;
+	width: 7px;
+	background-color: mediumpurple;
+}
+
+#min {
+	width: 4px;
+	height: 100px;
+	background-color: forestgreen;
+}
+
+#sec {
+	width: 2px;
+	height: 120px;
+	background-color: orangered;
+}
+
+.center-point {
+	transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 10px;
+	height: 10px;
+	background-color: orangered;
+	border-radius: 100%;
+}
+.center-point::after {
+	content: '';
+	transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 5px;
+	height: 5px;
+	background-color: #111;
+	border-radius: 100%;
+}
+
+.btn {
+	padding: 10px 15px;
+	border: 0;
+	font-family: inherit;
+	font-weight: bold;
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+	border-radius: 5px;
+	letter-spacing: 1.5px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: all 0.6s ease-in;
+}
+
+.btn:focus {
+	outline: 0;
+}
+
+.btn.light {
+}
+
+#time {
+	font-size: 56px;
+	margin-top: 40px;
+}
+
+#date {
+	font-family: sans-serif;
+	font-family: 'Heebo';
+	/* color: #666; */
+	font-size: 14px;
+}
+
+#date span {
+	border-radius: 100%;
+	line-height: 7px;
+	color: var(--secondary-color);
+	background-color: var(--primary-color);
+	padding: 8px;
+	display: inline-flex;
+	font-size: 11px;
+}

@@ -69,6 +69,7 @@ header span {
 	padding: 20px;
 	cursor: pointer;
 	height: 100%;
+	border: 2px solid orange;
 }
 
 .slide {

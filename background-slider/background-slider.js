@@ -1,5 +1,5 @@
 let currentSlide = 0;
-let slides = document.querySelectorAll('.slide');
+const slides = document.querySelectorAll('.slide');
 const btns = document.querySelectorAll('#slider-btns .fas');
 btns.forEach((btn) => {
 	btn.addEventListener('click', (e) => {
