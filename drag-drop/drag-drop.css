@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--banner-color: RGB(48, 56, 98);
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	overflow: hidden;
+}
+
+header {
+	width: 100%;
+	padding: 20px;
+	background-color: var(--banner-color);
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	color: #fff;
+}
+header span {
+	font-family: 'Niconne';
+	color: yellowgreen;
+	font-size: 40px;
+	padding-right: 10px;
+}
+
+.empty {
+	height: 150px;
+	width: 150px;
+	margin: 10px;
+	border: 3px solid #000;
+	background-color: #fff;
+	overflow: hidden;
+}
+
+.fill {
+	background-image: url(https://source.unsplash.com/random/150x150);
+	height: 100%;
+	overflow: hidden;
+	width: 100%;
+	cursor: pointer;
+}
+
+.hold {
+	border: 5px solid #ccc;
+}
+
+.hovered {
+	background-color: #333;
+	border: 3px dashed #fff;
+}
+@media (max-width: 800px) {
+	body {
+		flex-direction: column;
+	}
+}
