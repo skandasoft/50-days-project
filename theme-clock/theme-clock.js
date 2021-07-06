@@ -29,8 +29,8 @@ function getCurrentTime(firstTime) {
 				hour = hour - 12;
 				ampm = 'PM';
 			}
-			hourEl.style.transform = `translateX(-50%) rotate(${hour * 30 + Math.round(min / 60) * 6}deg)`;
 		}
+		hourEl.style.transform = `translateX(-50%) rotate(${hour * 30 + (min / 60) * 30}deg)`;
 		updateDateTime(hour, ampm, min);
 		setInterval(getCurrentTime, 1000);
 	}

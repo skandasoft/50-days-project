@@ -59,11 +59,26 @@ header span {
 	padding-right: 10px;
 }
 
+#clock-container {
+	background-color: hsl(176, 56%, 55%);
+	padding: 20px;
+	border-radius: 50%;
+	box-shadow: 0 3px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
 #clock {
 	height: 300px;
 	width: 300px;
-	border: 5px solid var(--primary-color);
+	border: 8px solid #fff;
+	border-radius: 100%;
 	position: relative;
+	background: url('clock.png');
+	/* background-color: #fff; */
+	background-size: cover;
+	border-collapse: separate;
+	background-repeat: no-repeat;
+	outline: 4px solid green;
+	outline-offset: 25px;
 }
 
 .needle {

@@ -18,6 +18,13 @@ canvas.addEventListener('mousedown', (e) => {
 	y = e.offsetY;
 	drawCircle(x, y);
 });
+canvas.addEventListener('touchstart', (e) => {
+	x = e.offsetX;
+	y = e.offsetY;
+	drawCircle(x, y);
+});
+
+canvas.addEventListener('touchend', (e) => {});
 
 canvas.addEventListener('mouseup', (e) => {
 	isPressed = false;
@@ -34,6 +41,17 @@ canvas.addEventListener('mousemove', (e) => {
 		x = x1;
 		y = y1;
 	}
+});
+canvas.addEventListener('touchmove', (e) => {
+	if (!x) {
+		return;
+	}
+	x1 = e.offsetX;
+	y1 = e.offsetY;
+	drawCircle(x1, y1);
+	drawLine(x, y, x1, y1);
+	x = x1;
+	y = y1;
 });
 
 function drawLine(x1, y1, x2, y2) {
