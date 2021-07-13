@@ -41,25 +41,45 @@ header span {
 }
 
 .card {
-	width: 300px;
+	width: 400px;
+	/* intrinsicsize="350x300" */
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 	border-radius: 10px;
-	overflow: hidden;
+	padding: 15px;
 }
 .card-header {
-	background-image: url(https://picsum.photos/300/200?random);
-	width: 300px;
-	height: 175px;
+	background-repeat: no-repeat;
+	border-radius: 10px;
+	overflow: hidden;
+	height: 300px;
+}
+.card-header img {
+	width: 100%;
+	height: 100%;
+	/* height: 215px; */
 }
 .content-header {
 	font-size: 15px;
 }
-.content-dtl {
+
+.card-content {
+	margin-top: 20px;
+}
+.card-excerpt {
 	font-size: 13px;
 	color: #777;
 }
-.content-info {
-	padding: 20px;
+
+.profile {
+	display: flex;
+	margin: 20px 0;
+}
+
+.profile img {
+	border-radius: 100%;
+	margin-right: 10px;
+	width: 50px;
+	height: 50px;
 }
 
 .profile-name {
@@ -67,17 +87,33 @@ header span {
 	line-height: 0.9;
 	margin-top: 8px;
 }
+
 .profile-info small {
 	font-size: 10px;
 	color: #919191;
+	display: block;
 }
 
-.content-profile img {
-	border-radius: 100%;
-	margin-right: 10px;
+.animated-bg {
+	background-image: linear-gradient(to right, #f6f7f8 0%, #edeef1 10%, #f6f7f8 20%, #f6f7f8 100%);
+	background-size: 200% 100%;
+	animation: bgPos 1s linear infinite;
 }
 
-.content-profile {
-	display: flex;
-	margin: 20px 0;
+.animated-bg-text {
+	animation: bgPos 1s linear infinite;
+	border-radius: 50px;
+	display: inline-block;
+	margin: 0;
+	height: 10px;
+	width: 100%;
+}
+
+@keyframes bgPos {
+	0% {
+		background-position: 50% 0;
+	}
+	100% {
+		background-position: -150% 0;
+	}
 }
