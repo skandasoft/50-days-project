@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--primary-color: RGB(31, 36, 69);
+	--secondary-color: RGB(48, 56, 98);
+	--light-purple: #7378c5;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	display: flex;
+	justify-content: center !important;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+	overflow: hidden;
+	background-color: lightsalmon;
+}
+#auto-text {
+	color: var(--primary-color);
+}
+.speed {
+	padding: 10px 20px;
+	background-color: rgba(0, 0, 0, 0.2);
+	position: absolute;
+	bottom: 30px;
+}
+.speed input {
+	width: 50px;
+	background: lightsalmon;
+	border: 0;
+	padding: 4px;
+	margin: 0 10px;
+	font-size: 18px;
+}
+
+input:focus {
+	outline: none;
+}
+
+#cursor {
+	font-size: 35px;
+	font-weight: 100;
+	opacity: 0.9;
+	color: var(--light-purple);
+	margin-left: -8px;
+}
