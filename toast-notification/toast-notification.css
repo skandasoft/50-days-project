@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--primary-color: RGB(31, 36, 69);
+	--secondary-color: RGB(48, 56, 98);
+	--light-purple: #7378c5;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	color: #fff;
+	padding-bottom: 50px;
+	background-color: indigo;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+button {
+	padding: 15px;
+	color: indigo;
+	font-size: 18px;
+	border-radius: 5px;
+	border: none;
+	font-weight: bold;
+}
+
+button:focus {
+	outline: 0;
+}
+
+#toasts {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	padding: 20px;
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: flex-end;
+}
+
+.toast {
+	margin: 10px;
+	padding: 1rem;
+	border-radius: 5px;
+
+	background-color: #eee;
+	color: indigo;
+	transition: all 0.2s ease-in-out;
+}
+
+.toast.info {
+	color: rebeccapurple;
+}
+.toast.success {
+	color: green;
+}
+.toast.warning {
+	color: yellow;
+}
+.toast.error {
+	color: orangered;
+}

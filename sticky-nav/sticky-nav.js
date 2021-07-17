@@ -1,9 +1,11 @@
-let navEl = document.getElementById('nav');
-let home = document.getElementById('home');
+let navEl = document.getElementById('main-nav');
+let homeEl = document.querySelector('#home a');
 window.addEventListener('scroll', (e) => {
-	if (window.scrollY > nav.offsetHeight + 150) {
-		nav.classList.add('active');
+	if (window.scrollY > navEl.offsetHeight + 150) {
+		navEl.classList.add('active');
+		homeEl.classList.add('current');
 	} else {
-		nav.classList.remove('active');
+		homeEl.classList.remove('current');
+		navEl.classList.remove('active');
 	}
 });
