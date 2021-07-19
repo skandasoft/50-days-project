@@ -1,3 +1,8 @@
+'use strict';
+import classes from './github-profile.scss';
+import axios from 'axios';
+import * as joke from './jokes';
+console.log(joke.name);
 const USER_URL = 'https://api.github.com/users/';
 // const REPOS_URL = 'https://api.github.com/users/skandasoft/repos",';
 
@@ -38,6 +43,7 @@ async function getUser(user) {
     createProfile(data);
     getRepos(user);
   } catch (err) {
+    console.log(err);
     if (err.response.status == 404) {
       createErrorCard('No such profile with the username');
     }
