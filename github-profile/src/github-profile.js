@@ -43,7 +43,6 @@ async function getUser(user) {
     createProfile(data);
     getRepos(user);
   } catch (err) {
-    console.log(err);
     if (err.response.status == 404) {
       createErrorCard('No such profile with the username');
     }
